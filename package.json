@@ -3,12 +3,16 @@
   "scripts": {
     "postinstall": "elm-tooling install",
     "start": "elm-pages dev",
-    "build": "elm-pages build"
+    "build": "elm-pages build",
+    "tailwind": " npx elm-tailwind-modules --tailwind-config './tailwind.config.js' --dir './src'"
   },
   "devDependencies": {
     "elm-optimize-level-2": "0.2.3",
     "elm-pages": "2.1.10",
     "elm-review": "^2.5.5",
-    "elm-tooling": "^1.4.0"
+    "elm-tailwind-modules": "^0.3.2",
+    "elm-tooling": "^1.4.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^2.2.19"
   }
 }

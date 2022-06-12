@@ -1,13 +1,20 @@
 module Page.Index exposing (Data, Model, Msg, page)
 
+-- import Html exposing (..)
+
+import Css
+import Css.Global
 import DataSource exposing (DataSource)
 import Head
 import Head.Seo as Seo
-import Html exposing (..)
+import Html.Styled as Html
+import Html.Styled.Attributes as Attr
 import Page exposing (Page, StaticPayload)
 import Pages.PageUrl exposing (PageUrl)
 import Pages.Url
 import Shared
+import Tailwind.Breakpoints as Breakpoints
+import Tailwind.Utilities as Tw
 import View exposing (View)
 
 
@@ -68,7 +75,10 @@ view :
     -> View Msg
 view maybeUrl sharedModel static =
     View "Sasky home page"
-        [ div []
-            [ h1 [] [ text "Sasky Home Page" ]
-            ]
+        [ Html.toUnstyled <|
+            Html.div
+                [ Attr.css [ Tw.bg_gray ]
+                ]
+                [ Html.h1 [] [ Html.text "Sasky Home Page" ]
+                ]
         ]
